@@ -9,14 +9,14 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from Cutiepii_Robot import dispatcher
-from Cutiepii_Robot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from Cutiepii_Robot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from Cutiepii_Robot import REDIS
-from Cutiepii_Robot.modules.users import get_user_id
+from Yui import dispatcher
+from Yui.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from Yui.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from Yui import REDIS
+from Yui.modules.users import get_user_id
 
-from Cutiepii_Robot.modules.helper_funcs.alternate import send_message
-from Cutiepii_Robot.modules.helper_funcs.readable_time import get_readable_time
+from Yui.modules.helper_funcs.alternate import send_message
+from Yui.modules.helper_funcs.readable_time import get_readable_time
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
