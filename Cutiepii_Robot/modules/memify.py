@@ -1,22 +1,25 @@
+# This modules belong to @Badboyanim for Yui Oregairu
+# Ported from KanekiRobot and Userbot
+
 import os
 import textwrap
 
 from PIL import Image, ImageFont, ImageDraw
-from KanekiRobot import dispatcher
-from KanekiRobot import telethn as bot
-from KanekiRobot.events import register as PANTEK
+from Yui import dispatcher
+from Yui import telethn as bot
+from Yui.events import register as Yui
 
 
 Credit = "This Plugin Made by Kittu (@A_viyu), if you're using this code in your bot. there is no issue but don't remove this line" 
 
 
-#@kontol.on_message(filters.command("mmf"))
-@PANTEK(pattern="^/mmf ?(.*)")
+#@Yui.on_message(filters.command("mmf"))
+@Yui(pattern="^/mmf ?(.*)")
 async def handler(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.reply("`Reply to an image or a sticker to memify it Nigga!!`")
+        await event.reply("`Reply to an image or a sticker to memify it!`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
@@ -52,7 +55,7 @@ async def drawText(image_path, text):
     if os.name == "nt":
         fnt = "ariel.ttf"
     else:
-        fnt = "./KanekiRobot/logopom/Chopsic.otf"
+        fnt = "./Yui/logopom/Chopsic.otf"
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
     if ";" in text:
         upper_text, lower_text = text.split(";")
