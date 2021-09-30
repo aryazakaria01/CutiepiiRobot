@@ -1,9 +1,9 @@
 from os import remove
 from pyrogram import filters
-from Cutiepii_Robot import DRAGONS, BOT_USERNAME, arq, pgram as app
-from Cutiepii_Robot.utils.errors import capture_err
-from Cutiepii_Robot.utils.permissions import adminsOnly
-from Cutiepii_Robot.modules.mongo.nsfw_mongo import is_nsfw_on, nsfw_off, nsfw_on
+from Yui import DRAGONS, BOT_USERNAME, arq, pgram as app
+from Yui.utils.errors import capture_err
+from Yui.utils.permissions import adminsOnly
+from Yui.modules.mongo.nsfw_mongo import is_nsfw_on, nsfw_off, nsfw_on
 
 
 async def get_file_id_from_message(message):
